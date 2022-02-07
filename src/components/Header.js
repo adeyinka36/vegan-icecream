@@ -1,6 +1,6 @@
 import styled from  'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faIceCream,faBars} from "@fortawesome/free-solid-svg-icons";
+import { faIceCream,faBars, faTimes} from "@fortawesome/free-solid-svg-icons";
 import { faInstagram, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import { useState, useRef } from "react";
 
@@ -58,6 +58,7 @@ const Con = styled.div`
     @media (max-width: 599px){
       display: inline-block;
       font-size: 4rem;
+      margin-right: 1rem;
     }
     &:hover {
       color: white;
@@ -91,6 +92,17 @@ const Con = styled.div`
        }
      }
    }
+   .cancel-mobile{
+     position: absolute;
+     right: 1rem;
+     top: 1rem;
+     color: white;
+     &:hover{
+       cursor: pointer;
+       color: #BA55D3;
+     }
+   }
+   
  }
 
 `
@@ -152,7 +164,7 @@ const Header  =  ()=> {
     }
 
     const showMobileMenu = () =>{
-        if(displayMobileMenu) {
+        if(!displayMobileMenu) {
             setDisplayMobileMenu(!displayMobileMenu);
             mobileMenuCon.current.style.right = '0';
         } else {
@@ -188,6 +200,7 @@ const Header  =  ()=> {
                         <li>BREWERY</li>
                         <li>SUBSCRIBE</li>
                     </ul>
+                    <FontAwesomeIcon icon={faTimes} className="cancel-mobile" onClick={showMobileMenu}/>
                 </div>
             </Con>
         )

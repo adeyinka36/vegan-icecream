@@ -1,9 +1,13 @@
 import './App.css';
-import Entrance from "./components/Entrance";
+import Entrance from "./views/Entrance";
+import Header from "./components/Header";
 
 function App() {
   return (
-   <Entrance/>
+      <div>
+        <Header/>
+        <Entrance/>
+      </div>
   );
 }
 

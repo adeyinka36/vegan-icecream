@@ -10,7 +10,7 @@ const Con = styled.div`
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(8, 1fr);
         .text{
-                grid-column: 5/12;
+                grid-column: 6/13;
                 grid-row: 2/4;
                 max-width: 730px;
         }
@@ -31,7 +31,7 @@ const Con = styled.div`
                 width: 100%;
                 grid-column: 2/9;
                 grid-row: 1/6;
-                max-width: 700px;
+                height: 55vw;
                 
                 
         }
@@ -44,6 +44,7 @@ const Con = styled.div`
                 width: 100%;
                 grid-column: 7/12;
                 grid-row: 5/10;
+                height: 35vw;
         }
 `
 

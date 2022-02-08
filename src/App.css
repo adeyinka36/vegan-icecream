@@ -6,7 +6,11 @@
   list-style-type: none;
   font-family: 'Quattrocento Sans', sans-serif;
 }
-
+body{
+  background-color: black;
+  max-width: 1550px;
+  margin: 0 auto;
+}
 h1,h2,h3 {
   font-family: 'Oswald', sans-serif;
 }

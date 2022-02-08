@@ -11,6 +11,14 @@ const Con = styled.div`
   align-items: center;
   justify-content: space-between;
   display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  background-color: rgba(0,0,0,0);
+  li{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  } 
   span{
     position: absolute;
     height: .5rem;
@@ -25,6 +33,9 @@ const Con = styled.div`
     color: #BA55D3;
     font-size: 2rem;
   }
+  .google {
+    margin-right: 1.7rem;
+  }
   .logo, .burger{
     font-size: 5rem;
   }
@@ -33,10 +44,14 @@ const Con = styled.div`
     color: white;
   }
   li{
-      margin-right: 1rem;
+      margin-right: 5rem;
       font-weight: 800;
+      font-size: 1.75rem;
   }
   .contact{
+    li{
+      margin-right: 1rem;
+    }
     @media (max-width: 599px){
       display: none;
     }
@@ -58,7 +73,7 @@ const Con = styled.div`
     @media (max-width: 599px){
       display: inline-block;
       font-size: 4rem;
-      margin-right: 1rem;
+      margin-right: 1.7rem;
     }
     &:hover {
       color: white;
@@ -74,11 +89,16 @@ const Con = styled.div`
    right: -200%;
    background-color: black;
    transition: right 1s ease-in;
+   
    @media (max-width: 599px){
      display: flex;
      justify-content: space-around;
      align-items: center;
      font-size: 2.5rem;
+   }
+   h1{
+     font-family: 'Pacifico', cursive;
+     color: #BA55D3;
    }
    ul{
      display: flex;
@@ -104,7 +124,19 @@ const Con = styled.div`
    }
    
  }
-
+ .logo-name{
+   display: none;
+   @media (max-width: 599px){
+     display: inline-block;
+     color: #BA55D3;
+     font-size: 2rem;
+     letter-spacing: .25rem;
+     font-family: 'Pacifico', cursive;
+   }
+   @media (max-width: 375px) {
+     font-size: 1.6rem;
+   }
+ }
 `
 
 const Header  =  ()=> {
@@ -189,8 +221,9 @@ const Header  =  ()=> {
                 <ul className="contact">
                     <li><FontAwesomeIcon icon={faInstagram} className="menu-icons"/></li>
                     <li><FontAwesomeIcon icon={faFacebook} className="menu-icons"/></li>
-                    <li><FontAwesomeIcon icon={faGoogle} className="menu-icons"/></li>
+                    <li><FontAwesomeIcon icon={faGoogle} className="menu-icons google"/></li>
                 </ul>
+                <h1 className="logo-name">CREAMY</h1>
                 <FontAwesomeIcon icon={faBars} className=" menu-icons burger" onClick={showMobileMenu}/>
                 <div className="mobile-nav-con" ref={mobileMenuCon}>
                     <ul className="mobile-nav">

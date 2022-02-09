@@ -44,7 +44,7 @@ const Con = styled.div`
     color: white;
   }
   li{
-      margin-right: 5rem;
+      margin-right: 2.5rem;
       font-weight: 800;
       font-size: 1.75rem;
   }
@@ -137,6 +137,11 @@ const Con = styled.div`
      font-size: 1.6rem;
    }
  }
+  .nav {
+    li {
+      font-size: 1rem;
+    }
+  }
 `
 
 const Header  =  ()=> {
@@ -147,19 +152,19 @@ const Header  =  ()=> {
     const iconFollow = e => {
         switch (e.target.innerText.toLowerCase()) {
             case 'menu':
-                cursorDot.current.style.left = '83px'
+                cursorDot.current.style.left = '110px'
                 return;
             case 'about':
-                cursorDot.current.style.left = '144px'
+                cursorDot.current.style.left = '203px'
                 return;
             case 'home':
                 cursorDot.current.style.left = '21px'
                 return;
             case 'brewery':
-                cursorDot.current.style.left = '216px'
+                cursorDot.current.style.left = '307px'
                 return;
             case 'subscribe':
-                cursorDot.current.style.left = '307px'
+                cursorDot.current.style.left = '433px'
                 return;
 
         }
@@ -168,24 +173,24 @@ const Header  =  ()=> {
     const newDotPosition = e => {
         switch (e.target.innerText.toLowerCase()) {
             case 'menu':
-                setCursorDotPosition('83px')
-                cursorDot.current.style.left = '83px'
+                setCursorDotPosition('110px')
+                cursorDot.current.style.left = '110px'
                 return;
             case 'about':
-                setCursorDotPosition('144px')
-                cursorDot.current.style.left = '144px'
+                setCursorDotPosition('203px')
+                cursorDot.current.style.left = '203px'
                 return;
             case 'home':
                 setCursorDotPosition('21px')
                 cursorDot.current.style.left = '21px'
                 return;
             case 'brewery':
-                setCursorDotPosition('216px')
-                cursorDot.current.style.left = '216px'
-                return;
-            case 'subscribe':
                 setCursorDotPosition('307px')
                 cursorDot.current.style.left = '307px'
+                return;
+            case 'subscribe':
+                setCursorDotPosition('433px')
+                cursorDot.current.style.left = '433px'
                 return;
 
         }

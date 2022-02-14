@@ -5,7 +5,7 @@ import { faInstagram, faGoogle, faFacebook } from '@fortawesome/free-brands-svg-
 import { useState, useRef } from "react";
 
 const Con = styled.div`
-  z-index: 2;
+  z-index: 200;
   height: 10vh;
   background-color: black;
   align-items: center;
@@ -138,6 +138,7 @@ const Con = styled.div`
    }
  }
   .nav {
+    margin-left: 6rem;
     li {
       font-size: 1rem;
     }
